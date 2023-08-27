@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Presenteie-me!</title>
+</head>
+<body>
+    <h1>Quer me presentear? Use o meu PIX abaixo!</h1>
+    <img src="seu_qrcode.png" alt="QR Code do meu PIX">
+    <p>Meu PIX: [seu número PIX]</p>
+</body>
+</html>
