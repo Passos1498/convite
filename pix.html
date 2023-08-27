@@ -8,24 +8,21 @@
             margin: 0;
             padding: 0;
             overflow: hidden; /* para evitar barras de rolagem */
-        }
-
-        /* CSS para exibir a imagem em tamanho real (tamanho A4) */
-        .arte-container {
-            width: 210mm;
-            height: 297mm;
-        }
-
-        img {
-            width: 100%;
             height: 100%;
-            display: block;
+            width: 100%;
+        }
+
+        /* Fazendo a imagem cobrir toda a tela */
+        body {
+            background-image: url('ArtePix.png');
+            background-size: contain; /* Mantém a proporção da imagem */
+            background-repeat: no-repeat; /* Evita repetição da imagem */
+            background-position: center; /* Centraliza a imagem */
+            background-color: black; /* Cor de fundo para preencher os espaços que a imagem não cobre */
         }
     </style>
 </head>
 <body>
-    <div class="arte-container">
-        <img src="ArtePix.png" alt="Pix">
-    </div>
+    <!-- Corpo vazio, pois a imagem é usada como fundo -->
 </body>
 </html>
