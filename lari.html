@@ -20,8 +20,13 @@
 
         let pe = new Image();
         pe.src = "pe.png";
+        
+        // Definir as dimensões desejadas
+        let peWidth = 50;  // ajuste conforme necessário
+        let peHeight = 30; // ajuste conforme necessário
+
         let peX = 50;
-        let peY = canvas.height - 80;
+        let peY = canvas.height - peHeight - 10; // Ajuste para o pé ficar logo acima do chão
         let jump = false;
         let jumpHeight = 0;
 
@@ -50,9 +55,9 @@
                 // Verificar colisão
                 if (
                     peX < obstacle.x + obstacle.width &&
-                    peX + pe.width > obstacle.x &&
+                    peX + peWidth > obstacle.x &&
                     peY - jumpHeight < obstacle.y + obstacle.height &&
-                    peY - jumpHeight + pe.height > obstacle.y
+                    peY - jumpHeight + peHeight > obstacle.y
                 ) {
                     alert("Game Over!");
                     location.reload();
@@ -69,8 +74,8 @@
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // Desenhar o pé
-            ctx.drawImage(pe, peX, peY - jumpHeight);
+            // Desenhar o pé com tamanho ajustado
+            ctx.drawImage(pe, 0, 0, pe.naturalWidth, pe.naturalHeight, peX, peY - jumpHeight, peWidth, peHeight);
 
             if (jump) {
                 jumpHeight += 5;
